@@ -1,0 +1,19 @@
+import classes from "./UsersList.module.css";
+import Card from "../UI/Card";
+
+const UsersList = ({ list }) => {
+  console.log(list);
+  return (
+    <Card className={classes.users}>
+      <ul>
+        {list.map((user) => (
+          <li key={user.id}>
+            {user.username} ({user.ageUser} years old)
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
+};
+
+export default UsersList;
